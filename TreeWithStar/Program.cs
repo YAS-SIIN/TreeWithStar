@@ -5,5 +5,6 @@ Drawer _drawer = new();
 _drawer.Tree(5);
 //Console.ReadLine();              
 
-Console.WriteLine("Hello, World!");
-             
+Console.WriteLine("------------");
+
+_drawer.TreeWithStarOnTop(5);
