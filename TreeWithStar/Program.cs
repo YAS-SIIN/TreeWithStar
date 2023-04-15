@@ -8,3 +8,4 @@ _drawer.TreePerformanced(5);
 Console.WriteLine("------------");
 
 _drawer.TreeWithStarOnTop(5);
+Console.ReadLine();

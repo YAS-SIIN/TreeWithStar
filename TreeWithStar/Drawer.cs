@@ -59,25 +59,37 @@ namespace TreeWithStar
          
             for (int i = 0; i < arrStar.Length; i++)
             {
-                    arrStar[i] = "X".PadLeft((2 * i) - 1, 'X');
+                    arrStar[i] = "X".PadLeft((2 * (i+1)) - 1, 'X');
             }
 
 
             int lastRowCount = arrStar[arrStar.Length - 1].Length;
 
+            //for (int i = 0; i < arrStar.Length; i++)
+            //{
+            //    int spaceCount = (lastRowCount - arrStar[i].Length) / 2;
+            //    //row = "";
+            //    //row += arrStar[i].PadLeft(spaceCount, ' ');
+            //    //for (int k = 0; k < spaceCount; k++)
+            //    //{
+            //    //    row += " ";
+            //    //}       
+            //    //row += arrStar[i];
+            //    Console.WriteLine(arrStar[i].PadLeft(spaceCount, ' '));
+            //}
+
             for (int i = 0; i < arrStar.Length; i++)
             {
                 int spaceCount = (lastRowCount - arrStar[i].Length) / 2;
-                //row = "";
-                //row += arrStar[i].PadLeft(spaceCount, ' ');
-                //for (int k = 0; k < spaceCount; k++)
-                //{
-                //    row += " ";
-                //}       
-                //row += arrStar[i];
-                Console.WriteLine(arrStar[i].PadLeft(spaceCount, ' '));
-            }
+                row = "";
+                for (int k = 0; k < spaceCount; k++)
+                {
+                    row += " ";
+                }
 
+                row += arrStar[i];
+                Console.WriteLine(row);
+            }
 
             Console.WriteLine("I".PadLeft((lastRowCount / 2) + 1, ' '));
         }
