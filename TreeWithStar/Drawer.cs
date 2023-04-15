@@ -16,6 +16,7 @@ namespace TreeWithStar
                 return;
             }
             string row;
+
             string[] arrStar = new string[layer];
             arrStar[0] = "X";
 
@@ -44,6 +45,41 @@ namespace TreeWithStar
 
 
             Console.WriteLine("I".PadLeft((lastRowCount/2) + 1, ' '));
+        }
+                 
+        public void TreePerformanced(int layer)
+        {
+            if (layer <= 0)
+            {
+                Console.WriteLine("please enter number bigger than zero");
+                return;
+            }
+            string row;
+            string[] arrStar = new string[layer];
+         
+            for (int i = 0; i < arrStar.Length; i++)
+            {
+                    arrStar[i] = "X".PadLeft((2 * i) - 1, 'X');
+            }
+
+
+            int lastRowCount = arrStar[arrStar.Length - 1].Length;
+
+            for (int i = 0; i < arrStar.Length; i++)
+            {
+                int spaceCount = (lastRowCount - arrStar[i].Length) / 2;
+                //row = "";
+                //row += arrStar[i].PadLeft(spaceCount, ' ');
+                //for (int k = 0; k < spaceCount; k++)
+                //{
+                //    row += " ";
+                //}       
+                //row += arrStar[i];
+                Console.WriteLine(arrStar[i].PadLeft(spaceCount, ' '));
+            }
+
+
+            Console.WriteLine("I".PadLeft((lastRowCount / 2) + 1, ' '));
         }
 
 

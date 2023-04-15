@@ -2,7 +2,7 @@
 using TreeWithStar;
 
 Drawer _drawer = new();
-_drawer.Tree(5);
+_drawer.TreePerformanced(5);
 //Console.ReadLine();              
 
 Console.WriteLine("------------");
